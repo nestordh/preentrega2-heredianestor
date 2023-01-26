@@ -1,4 +1,4 @@
-.formulario{
+.formulario{  /*form consulta*/
     background-color: #a8ade6;
     max-width: 900px;
     margin: 20px auto;
@@ -9,10 +9,6 @@
     gap: 10px;
     display: grid;
     height: 600px;
-
-    
-    
-    
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
     grid-template-areas: "titulo   titulo"
@@ -36,16 +32,11 @@
                              "asunto"
                              "mensaje"
                              "button";
-
-
-    }
-}
-
-
+   }}
+ 
 .formulario2 h2{
     grid-area: titulo;
 }
-
 .formulario2 label:nth-child(2){
     grid-area: nomApell;
 }
@@ -67,14 +58,11 @@
     border-radius: 4px;
     font-size: 20px;
     color: blue;
-
 }
 .formulario2 label{
     display:flex;
     flex-direction: column;
-
 }
-
 
 .formulario label input , .formulario label textarea {
     background-color: transparent;  /*elimina el color de la casilla*/
@@ -87,37 +75,40 @@
 
 
 
-/*boton*/
-.btn2{
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 12px  18px;
-    position: relative;
-    z-index: 1;
-    margin: 10px;
-}
+/*formulario inicio*/
+.fdatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(51, 51, 51, 0.521);
+    margin: 50px auto;
+    border: 20px solid #000;
+    border-radius: 15px;
+    outline: 5px solid #094;
+    width: 50%;
+    flex: 1;
+    padding: 30px;
+    font-size: 35px;
 
-.btn2 > i {
-    margin-left: 20px;
-}
-
-.btn2::before{
-    content: "";  /* se crea una seuddo clase vacia */ 
-    width: 45px;
-    height: 45px;
-    border-radius: 50px;
-    background-color: red;
-    position: absolute;
-    z-index: -1;
-    left: 83px;
-    transform: translate(0, -50%);
-    top: 50%;
-    transition: width 0.25s left 0.25s 0.25s;
-}
-
-.btn2:hover::before{
-    left: 0;
-    width: 100%;
-    transition: left 0.25s , width 0.25s 0.25s; 
+     >fieldset{
+        display:flex;
+        justify-content:column;
+        width: 100%;
+        background-color:#050;
+        
+     }}
+        
+.fdatos_input{
+    width: 60px;
+    padding: 10px;
+    margin: 6px;
+    border: 10px;
+    border-bottom: 10px solid #1c7;
+    background: transparent;
+    color: #fff;
+   }
+.fdatos >textarea{
+    height: 240px;
+    resize: none;
 }
