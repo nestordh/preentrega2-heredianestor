@@ -139,7 +139,6 @@ details summary > img {
   width: 15px;
 }
 
-
 .fecha > h3 {
   width: 100%;
   border: 10px;
@@ -519,6 +518,7 @@ footer .pie .pie3 {
   stroke-dashoffset: 0;
 }
 
+/*@import "ingreso";*/
 .loading {
   width: 100vw;
   height: 100vh;
@@ -799,4 +799,4 @@ tr:nth-child(even) {
   padding: 10px;
   font-size: 20px;
   border-radius: 5px;
-}
+}/*# sourceMappingURL=style.css.map */
