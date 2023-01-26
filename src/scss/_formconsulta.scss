@@ -1,0 +1,123 @@
+.formulario{
+    background-color: #a8ade6;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 30px;
+    color: white;
+    padding:30px;
+    margin-bottom: 10px;
+    gap: 10px;
+    display: grid;
+    height: 600px;
+
+    
+    
+    
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+    grid-template-areas: "titulo   titulo"
+                         "nomApell email"
+                         "tel      asunto"
+                         "mensaje mensaje"
+                         "button  button";
+}
+
+@media(max-width: 800px){
+    .formulario2{
+        width: 100%;
+        margin: 20px 0px;
+        border-radius: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+        grid-template-areas: "titulo"
+                             "nomApell"
+                             "email"
+                             "tel"      
+                             "asunto"
+                             "mensaje"
+                             "button";
+
+
+    }
+}
+
+
+.formulario2 h2{
+    grid-area: titulo;
+}
+
+.formulario2 label:nth-child(2){
+    grid-area: nomApell;
+}
+.formulario2 label:nth-child(3){
+    grid-area: email;
+}
+.formulario2 label:nth-child(4){
+    grid-area: tel;
+}
+.formulario2 label:nth-child(5){
+    grid-area: asunto;
+}
+.formulario2 label:nth-child(6){
+    grid-area: mensaje;
+}
+.formulario2 button:nth-child(7){ /*este es el boton para def prop*/
+    grid-area: button;
+    width: 200px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: blue;
+
+}
+.formulario2 label{
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+.formulario label input , .formulario label textarea {
+    background-color: transparent;  /*elimina el color de la casilla*/
+    border: 0;   /*elimina el borde de la casilla*/
+    border-bottom: 1px solid white;  /*hace solo la linea abajo*/
+    margin-top: 10px;   /*separa arriba*/
+    outline: none;
+    color: white;
+}
+
+
+
+/*boton*/
+.btn2{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 12px  18px;
+    position: relative;
+    z-index: 1;
+    margin: 10px;
+}
+
+.btn2 > i {
+    margin-left: 20px;
+}
+
+.btn2::before{
+    content: "";  /* se crea una seuddo clase vacia */ 
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    left: 83px;
+    transform: translate(0, -50%);
+    top: 50%;
+    transition: width 0.25s left 0.25s 0.25s;
+}
+
+.btn2:hover::before{
+    left: 0;
+    width: 100%;
+    transition: left 0.25s , width 0.25s 0.25s; 
+}

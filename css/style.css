@@ -1,0 +1,802 @@
+.but {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: brown;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buttom {
+  background: black;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+}
+
+.buttom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+}
+/* boton desde arriba */
+.boton {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background: #141414;
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 3s ease all;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.boton > a {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+  color: #fff;
+}
+.boton::after {
+  content: "";
+  width: 100%;
+  height: 300px;
+  background: rgb(128, 122, 123);
+  position: absolute;
+  z-index: 1;
+  top: -300px;
+  left: 0;
+  transition: 0.5s ease-in-out all;
+  border-radius: 0px 0px 300px 300px;
+}
+.boton:hover::after {
+  top: 0;
+}
+
+.desarrollo {
+  font-size: 200px;
+  margin: center;
+  text-align: center;
+  padding: 100px;
+}
+
+details {
+  margin: 30px;
+}
+details summary {
+  cursor: pointer;
+  font-size: 45px;
+}
+details summary > h2 {
+  color: rgb(49, 11, 11);
+  padding: 30px;
+  margin: 20px;
+}
+details summary > img {
+  margin: 20px;
+  padding: 30px;
+}
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  border: solid 3px;
+  border-radius: 10px;
+  overflow: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 38px;
+  color: black;
+  margin-top: 20px;
+}
+.caja .caja .cajadisp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20px;
+  border: solid 2px;
+  color: black;
+  font-size: 80px;
+  background-color: yellow;
+}
+.caja .caja .cajadisp .caja .cajadisp .dinValor {
+  font-size: 180px;
+  margin: 30px;
+  color: red;
+}
+.caja .caja .cajadisp .caja .cajadisp .dinValor > .ocultar {
+  width: 15px;
+}
+
+
+.fecha > h3 {
+  width: 100%;
+  border: 10px;
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.fondoapp {
+  background-image: url("/img/fondoapp1.jpg");
+}
+
+footer {
+  background-color: #b2b2b2;
+  color: rgb(20, 19, 19);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+footer .pie {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer .pie .pie1 {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-around;
+}
+footer .pie > li {
+  display: flex;
+  justify-content: space-end;
+  align-items: center;
+}
+footer .pie .pie2 {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-evenly;
+}
+footer .pie .pie3 {
+  margin: auto;
+  padding-top: 10px;
+}
+
+@media (max-width: 992px) {
+  footer {
+    background-color: #747474;
+    color: rgb(70, 4, 4);
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  footer .pie {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  footer .pie .pie1 {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+  }
+  footer .pie .pie1 > h4 {
+    display: none;
+  }
+  footer .pie2 {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+  }
+  footer .pie2 > h4 {
+    display: none;
+  }
+  footer .pie3 {
+    margin: auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    background-color: #999999;
+    color: rgb(20, 19, 19);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  footer .pie3 {
+    color: red;
+  }
+}
+.formulario {
+  background-color: #0a1266;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: white;
+  padding: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr auto;
+  grid-template-areas: "titulo   titulo" "nomApell email" "tel      asunto" "mensaje mensaje" "button  button";
+}
+
+@media (max-width: 800px) {
+  .formulario {
+    width: 100%;
+    margin: 20px 0px;
+    border-radius: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+    grid-template-areas: "titulo" "nomApell" "email" "tel" "asunto" "mensaje" "button";
+  }
+}
+.formulario h2 {
+  grid-area: titulo;
+}
+
+.formulario label:nth-child(2) {
+  grid-area: nomApell;
+}
+
+.formulario label:nth-child(3) {
+  grid-area: email;
+}
+
+.formulario label:nth-child(4) {
+  grid-area: tel;
+}
+
+.formulario label:nth-child(5) {
+  grid-area: asunto;
+}
+
+.formulario label:nth-child(6) {
+  grid-area: mensaje;
+}
+
+.formulario button:nth-child(7) { /*este es el boton para def prop*/
+  grid-area: button;
+  width: 200px;
+  border-radius: 4px;
+  font-size: 20px;
+  color: blue;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label input, .formulario label textarea {
+  background-color: transparent; /*elimina el color de la casilla*/
+  border: 0; /*elimina el borde de la casilla*/
+  border-bottom: 1px solid white; /*hace solo la linea abajo*/
+  margin-top: 10px; /* separa arriba*/
+  outline: none;
+  color: white;
+}
+
+.agradecimiento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 70px;
+}
+.agradecimiento > h1 {
+  display: flex;
+  font-size: 80px;
+  width: 500px;
+  color: rgb(26, 13, 212);
+  margin: 50px 0;
+}
+.agradecimiento > h2 {
+  display: flex;
+  flex-direction: row;
+  width: 20px;
+  color: black;
+  align-items: center;
+}
+.agradecimiento > .continuar {
+  width: 400px;
+  color: green;
+}
+.agradecimiento > .salir {
+  width: red;
+}
+
+.grafico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+.grafico > a {
+  display: flex;
+  justify-content: center;
+}
+.grafico > a > img {
+  width: 550px;
+}
+.grafico .dektop {
+  display: flex;
+  width: 500px;
+  text-align: center;
+  margin: 30px;
+}
+.grafico .movil {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .grafico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+  }
+  .grafico > a {
+    display: flex;
+    justify-content: center;
+  }
+  .grafico > a > img {
+    width: 550px;
+  }
+  .grafico .dektop {
+    display: flex;
+    width: 500px;
+    text-align: center;
+    margin: 30px;
+  }
+  .grafico .movil {
+    display: none;
+  }
+}
+@media (max-width: 992px) and (max-width: 576px) {
+  .grafico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+  }
+  .grafico > a {
+    display: flex;
+    justify-content: center;
+  }
+  .grafico > a > img {
+    width: 450px;
+  }
+  .grafico .dektop {
+    display: none;
+  }
+  .grafico .movil {
+    display: flex;
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+  }
+}
+.fondoindex {
+  width: 100%;
+  background-image: url("/img/concrete-fondo.jpg");
+  z-index: -5;
+}
+.fondoindex .index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 50px;
+}
+.fondoindex .index .contenedor {
+  display: grid;
+  grid-template-columns: repeat(1, 1);
+  gap: 10px;
+}
+.fondoindex .index .contenedor .saludo {
+  color: black;
+  width: auto;
+  display: grid;
+  align-items: center;
+  margin: 30px;
+}
+.fondoindex .index .contenedor .acceder {
+  color: black;
+  display: grid;
+  background: url("/img/fondoapp1.jpg");
+  width: auto;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  margin: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  align-items: center;
+}
+.fondoindex .index .contenedor .acceder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, black, red, blue, deeppink, blue, black);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(15px);
+  animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 500% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.fondoindex .index .contenedor .registro {
+  background: none;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: grid;
+  width: auto;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  border: none 3px;
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
+}
+.fondoindex .index .contenedor .registro > a {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.fondoindex .index .contenedor .registro > svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+.fondoindex .index .contenedor .registro > svg > rect {
+  width: 100%;
+  height: 100%;
+  stroke: black;
+  stroke-width: 10px;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  transition: 0.5s ease all;
+}
+.fondoindex .index .contenedor .registro > svg:hover rect {
+  stroke-dashoffset: 0;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 25, 25, 0.5764705882);
+  position: fixed;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading > i {
+  color: rgb(43, 46, 43);
+  font-size: 64px;
+  animation-name: rotar;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.logo {
+  background-image: url(/img/basLogo.jpg);
+  background-size: cover;
+  width: 160px;
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  padding: 30px;
+  padding-top: 5px;
+  margin: 10px;
+}
+
+.logueo {
+  margin: 50px auto;
+  width: 450px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.logueo > h2 {
+  margin: 0, 0, 30px;
+  padding: 0;
+  font-size: 30px;
+  color: #4cc9f0;
+  text-align: center;
+}
+
+.elemento label {
+  color: #fff;
+}
+
+.elemento input {
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+}
+
+.elemento input[type=submit] {
+  background-color: #2e2e2e;
+  border: none;
+  letter-spacing: 5px;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.elemento .boton {
+  width: 380px;
+}
+
+.lugares {
+  overflow: hidden;
+  margin: 40px;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+  justify-content: center;
+}
+.lugares iframe {
+  left: 0;
+  top: 0;
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  margin: 70px;
+}
+
+.navegador {
+  grid-area: nav;
+  background-color: #b2b2b2;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navegador > i {
+  display: none;
+}
+
+.navegador > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+}
+
+.navegador > ul > li {
+  position: relative;
+}
+
+.navegador > ul > li:hover ul {
+  display: block;
+}
+
+.navegador > ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.navegador > ul > li > ul {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  background-color: #b2b2b2;
+  left: -10px;
+}
+
+@media (max-width: 992px) {
+  .navegador {
+    background-color: #747474;
+  }
+  .navegador > i {
+    display: block;
+    color: black;
+    font-size: 36px;
+  }
+  .navegador > ul {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    background-color: #747474;
+    color: gray;
+    width: 250px;
+    height: 85vh;
+    transition: 0.2s;
+  }
+  .navegador > i:hover + ul {
+    left: 0;
+  }
+  .navegador .ul:hover {
+    left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .navegador {
+    background-color: #999999;
+  }
+  .navegador > i {
+    display: block;
+    color: white;
+    font-size: 26px;
+  }
+  .navegador > ul {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10px;
+    background-color: #999999;
+    color: gray;
+    width: 250px;
+    height: 85vh;
+    transition: 0.2s;
+  }
+  .navegador > i:hover + ul {
+    left: 0;
+  }
+  .navegador .ul:hover {
+    left: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.tabla {
+  max-width: 500px;
+  text-align: center;
+}
+
+table {
+  margin: 20px;
+  text-align: center;
+  border: solid 5px rgb(74, 8, 197);
+  border-collapse: collapse;
+}
+
+td, th {
+  border: solid 1px rgb(15, 15, 15);
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #d7f3cd;
+}
+
+.parrafo {
+  padding: 15px;
+  color: green;
+  text-shadow: center;
+  text-transform: uppercase;
+}
+
+.tablaInicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tablaIng {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card.img {
+  width: 100%;
+}
+
+.card {
+  width: 250px;
+  background-color: rgb(166, 201, 218);
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.card .btn {
+  border: 0;
+  background-color: rgba(179, 62, 62, 0.788);
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
