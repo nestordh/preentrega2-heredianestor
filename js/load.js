@@ -6,10 +6,10 @@ window.addEventListener('load', () => {
     let fin = new Date;
     let segundos = (fin-inicio);
 
-    if(segundos < 2000){
+    if(segundos < 1000){
         setTimeout(() => {
             loaderContainer.style.display = 'none';
-        }, 2000);
+        }, 1000);
     }else{
         loaderContainer.style.display = 'none';
     }
